@@ -31,8 +31,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Check PHP Version
         run: |
-          echo Default Version of PHP is at $(command -v php) ($(php -v))
-          echo Current Version of PHP is at $(command -v php${{ matrix.php-version }}) ($(/usr/bin/php${{ matrix.php-version }} -v))
+          echo "Default Version of PHP is at $(command -v php) ($(php -v))"
+          echo "Current Version of PHP is at $(command -v php${{ matrix.php-version }}) ($(/usr/bin/php${{ matrix.php-version }} -v))"
           echo
           echo Other PHP Versions:
           ls -lAh /usr/bin | grep php
